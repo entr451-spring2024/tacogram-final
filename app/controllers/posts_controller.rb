@@ -2,6 +2,11 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+
+    # alternative responses to requests other than HTML
+    # respond_to do |format|
+    #   format.html # implicitly renders posts/index.html.erb
+    # end
   end
 
   def new
